@@ -1,0 +1,33 @@
+{%extends 'all-pictures/base.html'%}
+
+{% block content %}
+{{block.super}}
+<div class="container">
+<div class="row">
+  <!-- Looping through images   -->
+  {% for picture in pictures %}
+
+
+      <!--Display Image  -->
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail" style="width:100%;">
+            <a href="/picture/{{pictures.id}}" class="text-center"> <img style="float:left;" src="{{picture.pictures.url}}" class="img-responsive" alt="pictures"></a>
+
+      </div>
+    </div>
+
+
+
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There No Images</h2>
+  </div>
+  {% endfor %}
+
+</div>
+</div>
+
+
+{% endblock %}
+
+

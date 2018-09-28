@@ -1,12 +1,17 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse, Http404
-# import datetime as dt
-# from .models import Article
+import datetime as dt
+from .models import Picture
 
 # # Create your views here.
 def welcome(request):
     return render(request, 'welcome.html')
 
+
+def picture_of_day(request):
+    date = dt.date.today()
+    pictures = Picture.todays_picture()
+    return render(request, 'welcome.html', {"date": date, "pictures": pictures})
 
 
 # def past_days_news(request,past_date):
