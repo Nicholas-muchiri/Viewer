@@ -33,7 +33,13 @@ class Picture(models.Model):
 		today = dt.date.today()
 		picture = cls.objects.filter(pub_date__date = today)
 		return picture
+
 	@classmethod
 	def search_by_category(cls,search_term):
 		picture = cls.objects.filter(category__name__icontains=search_term)
 		return picture
+
+	@classmethod
+	def pics(cls):
+		pictures = cls.objects.all()
+		return pictures

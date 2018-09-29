@@ -30,3 +30,9 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'all-pictures/search.html',{"message":message})
+
+def pics(request):
+   
+    pictures = Picture.objects.all()
+
+    return render(request,"welcome.html", {"pictures":pictures})
