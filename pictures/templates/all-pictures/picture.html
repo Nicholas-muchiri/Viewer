@@ -1,0 +1,51 @@
+{%extends 'all-images/base.html'%}
+
+ {% block content %}
+
+ <div class="container">
+
+
+   <div class="row">
+       <div class="jumbotrons">
+       <img src="{{image.image.url}}" class="img-responsive" alt="Image" style="width:70%; align:center;">
+       </div>
+
+   </div>
+
+   <div class="row">
+       <div class="thumbnail">
+       <h3 class="text-center">Picture Name:</h3>
+       <h6 class="text-center">{{picture.name}}</h6>
+       </div>
+   </div>
+
+     <div class="row">
+         <div class="thumbnail">
+         <h3 class="text-center">Description:</h3>
+             <p class="text-center"> {{picture.details}}</p>
+         </div>
+    </div>
+
+   <div class="row">
+       <div class="thumbnail">
+           <h3 class="text-center">Time updated:</h3>
+     <p class="text-center">Posted {{picture.pub_date|timesince}} </p>
+       </div>
+   </div>
+     <div class="row">
+         <div class="thumbnail">
+         <h3 class="text-center"> Location:</h3>
+         <h6 class="text-center">Location: {{picture.location}}</h6>
+         </div>
+    </div>
+     <div class="row">
+         <div class="thumbnail">
+         <h3 class="text-center"> Category:</h3>
+         <h6 class="text-center">Category: {{picture.category}}</h6>
+         </div>
+    </div>
+
+
+ </div>
+
+ {% endblock %}

@@ -30,15 +30,15 @@ def picture_of_day(request):
 #     news = Article.days_news(date)
 #     return render(request, 'all-news/past-news.html', {"date":date,"news":news})
 
-# def search_results(request):
-    
-#     if 'article' in request.GET and request.GET["article"]:
-#         search_term = request.GET.get("article")
-#         searched_articles = Article.search_by_title(search_term)
-#         message = f"{search_term}"
+def search_results(request):
 
-#         return render(request, 'all-news/search.html',{"message":message,"articles": searched_articles})
+    if 'picture' in request.GET and request.GET["picture"]:
+        search_term = request.GET.get("picture")
+        searched_pictures = Picture.search_by_category(search_term)
+        message = f"{search_term}"
 
-#     else:
-#         message = "You haven't searched for any term"
-#         return render(request, 'all-news/search.html',{"message":message})
+        return render(request, 'all-pictures/search.html',{"message":message,"pictures": searched_images})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'all-pictures/search.html',{"message":message})
