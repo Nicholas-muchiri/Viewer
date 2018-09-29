@@ -9,8 +9,30 @@
        <div class="jumbotrons">
        <img src="{{picture.picture.url}}" class="img-responsive" alt="Picture" style="width:70%; align:center;">
        </div>
-
+<a onclick="copyLink({{picture.id}})"><button type="button" class="btn btn-outline-warning my-2 my-sm-0 link-btn">Copy picture Link</button></a>
+              <input class="form-control" type="text" value="http://127.0.0.1:8000{{picture.picture.url}}" id="thislinkhere-{{picture.id}}">
+              <a ></a>
+        <button type="button" class="btn btn-outline-success" data-dismiss="modal">Close</button>
    </div>
+
+
+
+<script>
+    function copyLink(id) {
+      /* Get the text field */
+      var copyText = document.getElementById( "thislinkhere-" + id );
+
+      /* Select the text field */
+      copyText.select();
+
+      /* Copy the text inside the text field */
+      document.execCommand( "copy" );
+
+      /* Alert the copied text */
+      alert( "Do you want to share this link?: " + copyText.value );
+    }
+  </script>
+
 
    <div class="row">
        <div class="thumbnail">
