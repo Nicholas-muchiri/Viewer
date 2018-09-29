@@ -14,21 +14,9 @@ def picture_of_day(request):
     return render(request, 'welcome.html', {"date": date, "pictures": pictures})
 
 
-# def past_days_news(request,past_date):
-    
-#     try:
-#         # Converts data from the string Url
-#         date = dt.datetime.strptime(past_date,'%Y-%m-%d').date()
-#     except ValueError:
-#         # Raise 404 error when ValueError is thrown
-#         raise Http404()
-#         assert False
-
-#     if date == dt.date.today():
-#         return redirect(news_today)
-    
-#     news = Article.days_news(date)
-#     return render(request, 'all-news/past-news.html', {"date":date,"news":news})
+def filtered(request,past_date):
+    picture = Picture.objects.get(id = past_date)
+    return render(request, 'all-pictures/picture.html', {"picture":picture})
 
 def search_results(request):
 
