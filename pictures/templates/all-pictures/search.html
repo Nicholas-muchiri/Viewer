@@ -17,6 +17,8 @@
     {% for picture in pictures %}
       <div class="col-sm-6 col-md-3">
           <h1>{{picture.name}}</h1>
+       <a href="/pictures/{{picture.id}}" class="text-center"> 
+              <img src="{{picture.picture.url}}" class="img-responsive" alt="pictures"></a>
       </div>
     {% endfor %}
   {% endif %}
