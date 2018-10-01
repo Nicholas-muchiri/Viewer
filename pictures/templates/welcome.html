@@ -2,21 +2,31 @@
 
 {% block content %}
 {{block.super}}
-<div class="container-fluid">
-    <div class="row">
-        {% for picture in pictures %}
-            <p id="img-copy"></p>
-            <div class="col-md-4 img-holder">
-                <div class="image-details">
-                    <p class="text-center"><a data-toggle="modal" data-target="#{{pictures.id}}"></a></p>
-                </div>
-                <img src="{{pictures.picture.url}}" alt="pictures">
-            </div>
-        
-        {% endfor %}
+<div class="container">
+<div class="row">
+  <!-- Looping through images   -->
+  {% for pictures in pictures %}
+
+
+      <!--Display Image  -->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+       
+            <a href="/pictures/{{pictures.id}}" class="text-center"> 
+              <img src="{{pictures.picture.url}}" class="img-responsive" alt="pictures" style="width: 100%;"></a>
+
+     
     </div>
+
+
+
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There No Images</h2>
+  </div>
+  {% endfor %}
+
 </div>
-{%endblock%}
+</div>
 
 
-
+{% endblock %}
