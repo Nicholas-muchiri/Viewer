@@ -58,7 +58,7 @@ python3.6 manage.py runserver
 Open terminal on `localhost:8000`
 
 ## Known bugs
-Copy functionality does not work
+no bugs. 
 
 ## Technologies used
     - Python 3.6
