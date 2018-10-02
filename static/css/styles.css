@@ -42,9 +42,9 @@
    z-index: 1;
 }
 
-.demo .large-header {
+/*.demo .large-header {
    background-image: url("http://www.freeimageslive.com/galleries/backdrops/abstract/pics/dark_glitter_flecks.jpg");
-}
+}*/
 
 .main-title {
    position: absolute;
@@ -76,18 +76,7 @@
 
 /* Naviagtion panel */
 
-.nav-side {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1050;
-    top: 0;
-    right: 0;
-    background-color: #222;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 40px;
-}
+
 
 .nav-side a {
     padding: 8px 8px 8px 32px;
