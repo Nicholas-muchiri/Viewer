@@ -63,6 +63,7 @@ no bugs.
     - Bootstrap 4
     - JavaScript
     - Heroku
+    - Sqllite 3
     - Postgresql
 
 ## Support and contact details
