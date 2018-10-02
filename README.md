@@ -19,7 +19,7 @@ Run the following command on the terminal:
 `git clone https://github.com/Nicholas-muchiri/Viewer.git && cd Viewer`
 
 ### Activate virtual environment
-Activate virtual environment using python3.6 as the default handler
+Activate virtual environment using python3.6 as its default handler
 ```bash
 virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
 ```
