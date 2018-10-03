@@ -4,7 +4,7 @@
 #### By **[Nicholas Muchiri](https://github.com/Nicholas-muchiri)**
 
 ## Description
-[Viewer]((https://nicholasgallary.herokuapp.com/)) is a simple A web application used to post images according to location and category.. Users get to view photos updated by the site admin.  They can also copy the link to a photo to paste at their discretion. The search functionality will search photos based on the categories. 
+[Viewer](https://nicholasgallary.herokuapp.com) is a simple A web application used to post images according to location and category.. Users get to view photos updated by the site admin.  They can also copy the link to a photo to paste at their discretion. The search functionality will search photos based on the categories. 
 
 ## Set Up and Installations
 
